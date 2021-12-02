@@ -1,0 +1,19 @@
+{
+  "name": "web-ban-hang-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^2.2.19"
+  },
+  "devDependencies": {
+    "vite": "^2.6.14"
+  },
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "ISC"
+}
