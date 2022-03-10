@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="scr/css/styles.css" />
+    <link rel="stylesheet" href="/scr/styles.css" />
   </head>
   <body
     class="min-h-screen sm:px-8 py-6 bg-gradient-to-br from-indigo-500 to-red-500"
@@ -33,10 +33,10 @@
           class="list-none space-x-3 sm:space-x-6 sm:text-lg inline-flex items-center font-semibold"
         >
           <li class="text-gray-100 hover:text-blue-400 transition duration-200">
-            <a href="#homepage">Trang chủ</a>
+            <a href="#homepage">Homepage</a>
           </li>
           <li class="text-gray-100 hover:text-blue-400 transition duration-200">
-            <a href="#product">Sản phẩm</a>
+            <a href="#products">Products</a>
           </li>
         </ul>
       </div>
@@ -46,7 +46,7 @@
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 mr-3"
+            class="h-6 w-6 sm:mr-3"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -58,17 +58,17 @@
               d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
             />
           </svg>
-          <span class="hidden sm:inline-block">Đăng nhập</span>
+          <span class="hidden sm:inline-block">Sign In</span>
         </button>
       </a>
     </header>
     <section
-      id="#homepage"
+      id="homepage"
       class="relative mt-5 mx-3 sm:mx-28 shadow-sm"
       data-aos="fade-right"
     >
       <div
-        class="absolute bg-white opacity-60 backdrop-filter backdrop-blur-2xl rounded-lg inset-0"
+        class="absolute bg-white/60 backdrop-filter backdrop-blur-2xl rounded-lg inset-0"
       ></div>
       <div class="relative grid grid-cols-2">
         <div class="col-span-2 sm:col-span-1">
@@ -80,7 +80,7 @@
             </h1>
             <img
               class="sm:hidden self-center rounded-lg object-cover ml-auto shadow-md"
-              src="scr/img/Keyboard Images/axVWnvsNFLhp7v7Fm81MsRL4L9HwbmGM1IPJsSsQ9Bs.jpg"
+              id="banner-image-1"
               alt=""
             />
             <p class="text-gray-600 text-sm justify-start">
@@ -100,7 +100,7 @@
                 ><button
                   class="text-center font-semibold text-gray-800 hover:text-gray-500 transition duration-200"
                 >
-                  Explore Device
+                  Explore Dat Keyboard
                 </button></a
               >
             </div>
@@ -108,12 +108,15 @@
         </div>
         <img
           class="hidden sm:block self-center m-2 max-w-xl object-cover col-span-1 ml-auto rounded-tr-lg rounded-br-lg shadow-md"
-          src="scr/img/Keyboard Images/axVWnvsNFLhp7v7Fm81MsRL4L9HwbmGM1IPJsSsQ9Bs.jpg"
+          id="banner-image-1"
           alt=""
         />
       </div>
     </section>
-    <section id="product" class="hidden sm:grid grid-cols-2 mb-64 mx-28 m-10">
+    <section
+      id="product-demo"
+      class="hidden sm:grid grid-cols-2 mb-64 mx-28 m-10"
+    >
       <div class="col-span-1 flex space-x-10">
         <div
           class="relative group cursor-pointer"
@@ -121,15 +124,17 @@
           data-aos-anchor-placement="center-center"
           data-aos-duration="200"
         >
-        <img
-          class="max-w-sm rounded-md group-hover:-translate-y-2 transition duration-200"
-          src="scr/img/Keyboard Images/ao4xefvx33i51.jpg"
-          alt=""
-        />
+          <img
+            class="max-w-sm rounded-md group-hover:-translate-y-2 transition duration-200"
+            id="banner-image-2"
+            alt=""
+          />
           <div
-            class="absolute inset-0 bg-gray-700 bg-opacity-50 backdrop-filter backdrop-blur-md top-auto h-1/3 rounded-lg bottom-16 group-hover:-translate-y-2 transition duration-200"
+            class="absolute inset-0 bg-gray-700 bg-opacity-50 backdrop-filter backdrop-blur-md top-auto h-1/3 rounded-lg bottom-14 group-hover:-translate-y-2 transition duration-200"
           ></div>
-          <div class="absolute top-auto bottom-20 ml-3 space-y-5 group-hover:-translate-y-2 transition duration-200">
+          <div
+            class="absolute top-auto bottom-20 ml-3 space-y-5 group-hover:-translate-y-2 transition duration-200"
+          >
             <h1 class="text-white font-semibold text-lg">Keyboard 1</h1>
             <p class="text-gray-300">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -146,13 +151,15 @@
         >
           <img
             class="relative top-1/4 max-w-sm rounded-lg group-hover:-translate-y-2 transition duration-200"
-            src="scr/img/Keyboard Images/gdbt3pipmyf51.jpg"
+            id="banner-image-3"
             alt=""
           />
           <div
             class="absolute inset-0 bg-gray-700 bg-opacity-50 backdrop-filter backdrop-blur-md top-auto h-1/3 rounded-lg -bottom-[9.2rem] group-hover:-translate-y-2 transition duration-200"
           ></div>
-          <div class="absolute top-auto -bottom-32 ml-3 space-y-5 group-hover:-translate-y-2 transition duration-200">
+          <div
+            class="absolute top-auto -bottom-32 ml-3 space-y-5 group-hover:-translate-y-2 transition duration-200"
+          >
             <h1 class="text-white font-semibold text-lg">Keyboard 2</h1>
             <p class="text-gray-300">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -180,7 +187,44 @@
         </div>
       </div>
     </section>
+    <section class="bg-white/60 rounded-lg mt-5 mx-3 sm:mx-28 shadow-sm">
+      <div class="px-3 sm:px-10 py-20 pt-3">
+        <h2 class="text-gray-800 font-semibold text-2xl mb-8">Products</h2>
+        <div
+          id="products"
+          class="gap-x-4 gap-y-4 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
+        >
+
+        
+        </div>
+      </div>
+    </section>
   </body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBa68wqeX9-ztnkex7aIT1Xs9eXplNG7qk",
+      authDomain: "the-round-table-ffc3f.firebaseapp.com",
+      projectId: "the-round-table-ffc3f",
+      storageBucket: "the-round-table-ffc3f.appspot.com",
+      messagingSenderId: "551826854387",
+      appId: "1:551826854387:web:7cdd75b6cbc985bc274286",
+      measurementId: "G-3NRE8RWMTD",
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="index.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
