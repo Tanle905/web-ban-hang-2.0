@@ -7,3 +7,6 @@
       zoom: 0.975;
     }
   }
+  html {
+    scroll-behavior: smooth;
+  }
