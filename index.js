@@ -45,3 +45,20 @@ const productsImg = $("#products img").attr(
   "src",
   "https://firebasestorage.googleapis.com/v0/b/the-round-table-ffc3f.appspot.com/o/e-commerce%2F0xx4525d9xg51%20(1).jpg?alt=media&token=82799bc3-d902-46ac-ae15-4a6cf56a60eb"
 );
+
+// Login.html
+
+const loginForm = $("#login-form")
+const signupForm = $("#signup-form")
+const switchToSignup = $("#switch-to-signup")
+const switchToLogin = $("#switch-to-login")
+const loginButton = $("#login")
+switchToSignup.on("click",()=>{
+  loginForm.addClass("hidden")
+  signupForm.removeClass("hidden")
+})
+switchToLogin.on("click",()=>{
+  signupForm.addClass("hidden")
+  loginForm.removeClass("hidden")
+})
+loginForm.on("submit", ()=> console.log(loginForm.value))

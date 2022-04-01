@@ -14,10 +14,10 @@
   </head>
 
   <body class="">
-    <div class="lg:mx-5 2xl:mx-20 h-screen m-auto">
+    <div class="m-auto h-screen lg:mx-5 2xl:mx-20">
       <div hidden class="fixed inset-0 w-8/12 lg:block">
         <video
-          class="w-full h-full object-cover"
+          class="h-full w-full object-cover"
           autoplay
           loop
           muted
@@ -25,12 +25,12 @@
         ></video>
       </div>
       <div
-        class="fixed inset-0 w-5/12 ml-auto bg-white/50 backdrop-filter backdrop-blur-3xl lg:block"
+        class="fixed inset-0 ml-auto w-5/12 bg-white/50 backdrop-blur-3xl backdrop-filter lg:block"
       ></div>
-      <div class="relative h-full ml-auto lg:w-4/12 2xl:w-3/12">
+      <div class="relative ml-auto h-full lg:w-4/12 2xl:w-3/12">
         <a
           href="index.html"
-          class="flex w-48 mt-5 mx-6 ml-auto bg-gray-200 text-gray-800 font-bold rounded-md p-2 transition duration-200 transform hover:-translate-y-1 hover:-translate-x-1 hover:bg-blue-500 hover:text-gray-100 drop-shadow-sm"
+          class="mx-6 mt-5 ml-auto flex w-48 transform rounded-md bg-gray-200 p-2 font-bold text-gray-800 drop-shadow-sm transition duration-200 hover:-translate-y-1 hover:-translate-x-1 hover:bg-blue-500 hover:text-gray-100"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@
         <div class="m-auto py-12 px-6 sm:py-20">
           <div class="space-y-4">
             <span
-              class="flex items-center text-xl font-bold text-gray-700 space-x-2 col-span-2 sm:col-span-4"
+              class="col-span-2 flex items-center space-x-2 text-xl font-bold text-gray-700 sm:col-span-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,31 +69,94 @@
             </span>
           </div>
           <div class="my-6 border-t"></div>
-          <form action="" class="space-y-6 py-6 placeholder:text-white">
+          <form
+            action=""
+            id="login-form"
+            class="space-y-6 py-6 placeholder:text-white"
+          >
             <div>
               <input
                 type="email"
                 placeholder="Your Email"
-                class="placeholder:text-gray-600 w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                class="w-full rounded-xl bg-transparent py-3 px-6 placeholder-gray-600 ring-1 ring-gray-300 transition placeholder:text-gray-600 invalid:ring-red-400 focus:invalid:outline-none disabled:bg-gray-100 disabled:placeholder-gray-400 disabled:ring-gray-200"
               />
             </div>
 
-            <div class="flex flex-col items-end">
+            <div>
               <input
                 type="password"
                 placeholder="Your password"
-                class="placeholder:text-gray-600 w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                class="w-full rounded-xl bg-transparent py-3 px-6 placeholder-gray-600 ring-1 ring-gray-300 transition placeholder:text-gray-600 invalid:ring-red-400 focus:invalid:outline-none disabled:bg-gray-100 disabled:placeholder-gray-400 disabled:ring-gray-200"
+              />
+            </div>
+            <div class="space-x-1 text-left">
+              <input type="checkbox" /><label class="text-gray-800" for=""
+                >Remember your password</label
+              >
+            </div>
+            <div>
+              <button
+                type="submit"
+                id="login"
+                class="w-full rounded-xl bg-blue-600 px-6 py-3 transition hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-800"
+              >
+                <span class="text-lg font-semibold text-white">Login</span>
+              </button>
+              <a
+                href="#"
+                type="reset"
+                id="switch-to-signup"
+                class="-ml-3 w-max p-3"
+              >
+                <span class="text-sm tracking-wide text-blue-600"
+                  >Create new account</span
+                >
+              </a>
+            </div>
+          </form>
+          <form
+            action=""
+            id="signup-form"
+            class="hidden space-y-6 py-6 placeholder:text-white"
+          >
+            <div>
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="w-full rounded-xl bg-transparent py-3 px-6 placeholder-gray-600 ring-1 ring-gray-300 transition placeholder:text-gray-600 invalid:ring-red-400 focus:invalid:outline-none disabled:bg-gray-100 disabled:placeholder-gray-400 disabled:ring-gray-200"
+              />
+            </div>
+
+            <div>
+              <input
+                type="password"
+                placeholder="Your password"
+                class="w-full rounded-xl bg-transparent py-3 px-6 placeholder-gray-600 ring-1 ring-gray-300 transition placeholder:text-gray-600 invalid:ring-red-400 focus:invalid:outline-none disabled:bg-gray-100 disabled:placeholder-gray-400 disabled:ring-gray-200"
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                placeholder="Enter your password again"
+                class="w-full rounded-xl bg-transparent py-3 px-6 placeholder-gray-600 ring-1 ring-gray-300 transition placeholder:text-gray-600 invalid:ring-red-400 focus:invalid:outline-none disabled:bg-gray-100 disabled:placeholder-gray-400 disabled:ring-gray-200"
               />
             </div>
             <div>
               <button
-                class="mt-10 w-full px-6 py-3 rounded-xl bg-blue-600 transition hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-800"
+                type="submit"
+                id="signup"
+                class="w-full rounded-xl bg-blue-600 px-6 py-3 transition hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-800"
               >
-                <span class="font-semibold text-white text-lg">Login</span>
+                <span class="text-lg font-semibold text-white">Sign up</span>
               </button>
-              <a href="#" type="reset" class="w-max p-3 -ml-3">
+              <a
+                href="#"
+                type="reset"
+                id="switch-to-login"
+                class="-ml-3 w-max p-3"
+              >
                 <span class="text-sm tracking-wide text-blue-600"
-                  >Create new account</span
+                  >Have an account ? Login</span
                 >
               </a>
             </div>
@@ -102,4 +165,10 @@
       </div>
     </div>
   </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="index.js"></script>
 </html>
